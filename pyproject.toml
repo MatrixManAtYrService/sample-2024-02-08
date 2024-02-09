@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "trackapp"
+version = "0.1.0"
+description = "it tracks things"
+authors = ["Matt Rixman <MatrixManAtYrService@users.noreply.github.com>"]
+readme = "README.md"
+packages = [
+  { include = "trackapp", from ="src"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.scripts]
+trackapp = "trackapp.app:cli"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
